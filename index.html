@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='open sans':wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+    <style>
+
+      *{
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      } 
+
+      body{
+        padding: 0.5rem;
+      }
+
+      p, h1, h2, h3{
+        color: #1E3050;
+      }
+
+      a{
+        color: #1E3050;
+      }
+
+      a:hover, a:active{
+        color: #0a66c2;
+      }
+
+
+      .mainHeader{
+        padding: 1rem;
+        margin: .5rem;
+        border: 1px solid #1E3050;
+        border-radius: 1rem;
+        position: relative;
+      }
+      
+      .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header::after{
+        content: '';
+        display: inline-block;
+        width: 1.8rem;
+        height: 1.8rem;
+        top: 1rem;
+        right: 1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url(icons/more.png);
+        position: absolute;
+        cursor: pointer;
+      }
+
+      .header .myPhoto{
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .header h1{
+        font-weight: 600;    
+        text-align: center;
+      }
+
+    .information p{
+        font-size: 1.2rem;
+    }
+   
+    
+
+  
+
+
+    .acordeon{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid #1E3050;
+        border-radius: 1rem;
+        color: #1E3050;
+    }
+
+    .acordeon:hover{
+        background-color: #1E3050;        
+    }
+    .acordeon .trigger:hover{
+        color: #fff;
+        
+    }
+
+    .acordeon .content{
+        display: block;
+        color: #fff;
+    }
+
+    .acordeon .trigger{
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: none;
+        color: #1E3050;
+    }
+
+   
+
+    @media only screen and (min-width: 768px) {
+       
+
+        .mainHeader{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1024px;
+            margin: 1rem auto;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .header .nameANDinformation{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header h1{
+            text-align: left;
+            margin-left: 0.5rem;    
+        }
+
+        .header .myPhoto{
+            margin-right: 2rem;    
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <div class="mainHeader">
+        <header class="header">
+            <img src="myPhoto.png" alt="foto de Alan" class="myPhoto">
+            <div class="nameANDinformation">
+                <h1>Alan Assis</h1>
+                <div class="information">
+                    <p class="job">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Estudante de Nutrição - UNEB
+                    </p>
+                    <p class="location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Salvador - BA
+                    </p>
+                    <p class="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                        LinkedIn: &nbsp<a href="https://www.linkedin.com/in/alancruzassis">in/alancruzassis</a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <button type="button">
+                Skills
+            </button>
+            <div>
+                <h3>Habilidades técnicas</h3>
+            </div>
+            <div>
+                <h3>Soft skills</h3>
+            </div>
+        </section>
+
+        <section class="acordeon">
+            <button class="trigger">
+                <div>
+                    Idiomas
+                    <i class="fa-solid fa-earth-americas"></i>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="content">
+                <ul>
+                    <li>Português</li>
+                    <li>Inglês</li>
+                </ul>
+            </div>
+            
+        </section>
+    </div> <!--mainHeader-->
+
+    <main>
+        <div class="about">
+            <h3>Sobre</h3>
+            <p>Sou Estudante de Nutrição (UNEB), Estagiário de Nutrição Clínica no Hospital Português, fui Vice-Presidente da Liga Acadêmica de Primeiros Socorros (LAEPS/UNEB) e Estagiário de Nutrição Clínica na Clínica de Dor da UNEB (CLINDOR).</p><br>
+            <p>Gosto de estudar Desenvolvimento Web com JavaScript, HTML5 e CSS3. Criei em parceria com colaboradores soluções na forma de Web APPs.</p><br><br>
+
+        </div>
+        <div class="projetos">
+            <div>
+                <h3>Projetos</h3>
+                <h4>Neonatologia</h4>
+                <ul>
+                    <li><a href="https://neodate.uneb.br" target="_blank">Neodate</a></li>
+                    <ul>
+                        <p class="i">Correção da Idade Gestacional de pré-termos</p>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><a href="https://alancruzassis.github.io/vgp" target="_blank">VGP</a></li>
+                    <ul>
+                        <p class="i">Velocidade de Ganho de Peso</p>
+                    </ul>
+                </ul>    
+                    <h4>Medicamentos e Suplementos</h4>
+                    <ul>
+                        <li><a href="https://alancruzassis.github.io/transformsolucoes" target="_blank">Transform Soluções</a></li>
+                        <ul>
+                            <p class="i">Modificação da concentração de medicamentos</p>
+                        </ul>
+                    </ul>
+                    <ul>
+                    <li><a href="https://alancruzassis.github.io/comparesup" target="_blank">CompareSup</a></li>
+                        <ul>
+                            <p class="i">Auxilia na avaliação do custo-benefício de suplementos nutricionais</p>
+                        </ul>
+                    </ul>
+                <h4>Terapia Nutricional</h4>
+                <ul>
+                    <li><a href="https://alancruzassis.github.io/grandequeimado" target="_blank">Grande Queimado</a></li>
+                    <ul>
+                        <p class="i">Gasto Energético de pacientes com grandes queimaduras</p>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><a href="https://alancruzassis.github.io/get" target="_blank">GET</a></li>
+                    <ul>
+                        <p class="i">Gasto Energético Basal e Total de Adultos e Idosos não críticos</p>
+                    </ul>
+                </ul>
+                <ul>
+                    <li><a href="https://alancruzassis.github.io/volumeinfundido" target="_blank">Volume Infundido / Prescrito</a></li>
+                    <ul>
+                        <p class="i">Calculadora do percentual de volume infundido</p>
+                    </ul>
+                </ul>
+            
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/27d65a4a33.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
