@@ -14,27 +14,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
-        function menuIdioma (){
-            var contentIdioma = window.document.getElementById("contentIdioma");
-            var acordeonIdioma = window.document.getElementById("acordeonIdioma");
-            var triggerIdioma = window.document.getElementById("triggerIdioma");
-            var menuArrow = window.document.getElementById("menuArrow");
+        
+            function menuIdioma (){
+                var contentIdioma = window.document.getElementById("contentIdioma");
+                var acordeonIdioma = window.document.getElementById("acordeonIdioma");
+                var triggerIdioma = window.document.getElementById("triggerIdioma");
+                var menuArrowIdioma = window.document.getElementById("menuArrowIdioma");
 
-            if(contentIdioma.style.display!="block"){
-                contentIdioma.style.display="block";
-                acordeonIdioma.style.backgroundColor="#1E3050";
-                triggerIdioma.style.backgroundColor="#1E3050";
-                triggerIdioma.style.color="#ffffff";
-                menuArrow.className="fa-solid fa-chevron-up";
-            }else{
-                contentIdioma.style.display="none";
-                menuArrow.className="fa-solid fa-chevron-down";
-                acordeonIdioma.style.backgroundColor="#fff";
-                triggerIdioma.style.backgroundColor="#fff";
-                triggerIdioma.style.color="#1E3050";
+                if(contentIdioma.style.display!="block"){
+                    contentIdioma.style.display="block";
+                    contentIdioma.style.backgroundColor="#1E3050";
+                    menuArrowIdioma.className="fa-solid fa-chevron-up";
+                    acordeonIdioma.style.backgroundColor = "#1E3050";
+                    acordeonIdioma.style.color = "#fff";
+
+                    triggerIdioma.addEventListener('mouseout', () => {
+                        // Change the button's  color
+                        triggerIdioma.style.backgroundColor = "#1E3050";
+                        triggerIdioma.style.color = "#fff";
+                    });
+
+                    
+                }else{
+                    contentIdioma.style.display="none";
+                    menuArrowIdioma.className="fa-solid fa-chevron-down";
+                    contentIdioma.style.backgroundColor="#fff";
+                                      
+                    triggerIdioma.addEventListener('mouseover', () => {
+                        // Change the button's background color
+                        triggerIdioma.style.backgroundColor = "#1E3050";
+                        triggerIdioma.style.color = "#fff";
+                    });
+
+                    triggerIdioma.addEventListener('mouseout', () => {
+                        // Change the button's background color
+                        triggerIdioma.style.backgroundColor = "#fff";
+                        triggerIdioma.style.color = "#1E3050";
+                        acordeonIdioma.style.backgroundColor = "#1E3050";
+                    });
+                    
+                }
+
             }
 
-        }
+            function menuXp (){
+                var contentXp = window.document.getElementById("contentXp");
+                var acordeonXp = window.document.getElementById("acordeonXp");
+                var triggerXp = window.document.getElementById("triggerXp");
+                var menuArrowXp = window.document.getElementById("menuArrowXp");
+
+                if(contentXp.style.display!="block"){
+                    contentXp.style.display="block";
+                    contentXp.style.backgroundColor="#1E3050";
+                    menuArrowXp.className="fa-solid fa-chevron-up";
+                    acordeonXp.style.backgroundColor = "#1E3050";
+                    acordeonXp.style.color = "#fff";
+
+                    triggerXp.addEventListener('mouseout', () => {
+                        // Change the button's  color
+                        triggerXp.style.backgroundColor = "#1E3050";
+                        triggerXp.style.color = "#fff";
+                    });
+
+                    
+                }else{
+                    contentXp.style.display="none";
+                    menuArrowXp.className="fa-solid fa-chevron-down";
+                    contentXp.style.backgroundColor="#fff";
+                                      
+                    triggerXp.addEventListener('mouseover', () => {
+                        // Change the button's background color
+                        triggerXp.style.backgroundColor = "#1E3050";
+                        triggerXp.style.color = "#fff";
+                    });
+
+                    triggerXp.addEventListener('mouseout', () => {
+                        // Change the button's background color
+                        triggerXp.style.backgroundColor = "#fff";
+                        triggerXp.style.color = "#1E3050";
+                        acordeonXp.style.backgroundColor = "#1E3050";
+                    });
+                    
+                }
+
+            }
+            
     </script>
     
     <style>
@@ -66,7 +130,11 @@
         margin: .5rem;
         border: 1px solid #1E3050;
         border-radius: 1rem;
-        position: relative;
+        position: relative;     
+      }
+
+      .mainHeader .acordeon{
+        margin: 0 0 0.5em 0;
       }
       
       .header{
@@ -137,6 +205,11 @@
         border: none;
         border-radius: 1rem;
         color: #1E3050;
+        text-align: left;
+        
+        
+ overflow: hidden !important;
+ text-overflow: ellipsis;
     }
     .acordeon .trigger:hover{
         color: #fff;
@@ -158,7 +231,12 @@
     .acordeon .content p{
         color: #fff;
         font-size: 0.8rem;
-        }
+        margin-bottom: 2rem;
+    }
+
+    .acordeon .content li{
+        font-weight: bold;
+    }
 
     
 
@@ -225,6 +303,7 @@
             </div>
         </header>
 
+        
         <section>
             <button type="button">
                 Skills
@@ -236,7 +315,7 @@
                 <h3>Soft skills</h3>
             </div>
             <div>
-                <h3>Experiências</h3>
+                <h3>Cursos</h3>
             </div>
         </section>
 
@@ -246,7 +325,7 @@
                     Idiomas
                     <i class="fa-solid fa-earth-americas"></i>
                 </div>
-                <i id="menuArrow" class="fa-solid fa-chevron-down"></i>
+                <i id="menuArrowIdioma" class="fa-solid fa-chevron-down"></i>
             </button>
             
             <div class="content" id="contentIdioma">
@@ -256,6 +335,27 @@
                 </ul>
                 <h4>Por que é importante que o Nutricionita saiba inglês?</h3>
                 <p>O inglês é uma língua franca utilizada no mundo inteiro. A maior parte dos estudos científicos e diretrizes internacionais de saúde está em inglês.</p>
+            </div>
+            
+        </section>
+        <section class="acordeon" id="acordeonXp"> 
+            <button class="trigger" id="triggerXp" onclick="menuXp()">
+                <div>
+                    Experiências 
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <i id="menuArrowXp" class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="content" id="contentXp">
+                <ul>
+                    <li>Hospital Português</li>
+                    <p>nov 2022 - Atualmente · 1a 2m</p>
+                                  
+                    <li>Clínica da Dor (UNEB)</li>
+                    <p>Abr 2021 - Jul 2022 · 1a 4m</p>
+                </ul>
+                
             </div>
             
         </section>
