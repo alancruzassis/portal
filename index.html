@@ -109,7 +109,7 @@
       } 
 
       body{
-        padding: 0.5rem;
+        justify-content: center;
       }
 
       p, h1, h2, h3{
@@ -124,7 +124,22 @@
         color: #0a66c2;
       }
 
-
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        max-width: 900px;
+        line-height: 1.4;
+      }
+      main li{
+        margin-bottom: 0.5em;
+      }
+      .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       .mainHeader{
         padding: 1rem;
         margin: .5rem;
@@ -315,7 +330,11 @@
                 <h3>Soft skills</h3>
             </div>
             <div>
-                <h3>Cursos</h3>
+                <h3>Formação</h3>
+                <p>uma das maiores cargas horárias para curso de nutrição do país</p>
+            </div>
+            <div>
+                <h3>Pra quem é meu atendimento</h3>
             </div>
         </section>
 
@@ -350,6 +369,33 @@
             <div class="content" id="contentXp">
                 <ul>
                     <li>Hospital Português</li>
+                    <p>Estágio extracurricular<br>
+                    nov 2022 - Atualmente · 1a 2m</p>
+                                  
+                    <li>Clínica da Dor (UNEB)</li>
+                    <p>Estágio extracurricular<br>
+                    Abr 2021 - Jul 2022 · 1a 4m</p>
+
+                    <li>Clínica Geral de Nutrição (UNEB)</li>
+                    <p>Estágio extracurricular<br>
+                    Mai 2021 - Dez 2022 · 7m</p>
+                </ul>
+                
+            </div>
+            
+        </section>
+        <section class="acordeon" id="acordeonCursos"> 
+            <button class="trigger" id="triggerCursos" onclick="menuCursos()">
+                <div>
+                    <i class="fa-solid fa-book-open"></i> Cursos 
+                    
+                </div>
+                <i id="menuArrowCursos" class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="content" id="contentCursos">
+                <ul>
+                    <li>Hospital Português</li>
                     <p>Estágio <br>
                     nov 2022 - Atualmente · 1a 2m</p>
                                   
@@ -363,13 +409,175 @@
         </section>
     </div> <!--mainHeader-->
 
+    <div class="main">
     <main>
         <div class="about">
-            <h3>Sobre</h3>
-            <p>Sou Estudante de Nutrição (UNEB), Estagiário de Nutrição Clínica no Hospital Português, fui Vice-Presidente da Liga Acadêmica de Primeiros Socorros (LAEPS/UNEB) e Estagiário de Nutrição Clínica na Clínica de Dor da UNEB (CLINDOR).</p><br>
-            <p>Gosto de estudar Desenvolvimento Web com JavaScript, HTML5 e CSS3. Criei em parceria com colaboradores soluções na forma de Web APPs aplicadas à saúde.</p><br><br>
+            <h3>Sobre mim</h3>
+            <p>Sou Estudante de Nutrição (UNEB) e ajudo pessoas a lidar com diversos problemas de saúde e ter mais saúde e qualidade de vida. <br>
+            </p>
+            <p>Gosto de estudar Desenvolvimento Web. Criei, em parceria com colaboradores, diversas soluções tecnológicas aplicadas à saúde. <br><br>
+            Com as ferramentas que eu crio, consigo fazer uma análise mais <b>precisa</b> e <b>eficiente</b> da situação clínica e nutricional dos pacientes que atendo para escolher o melhor tratamento.</p><br>
 
         </div>
+
+        <div class="about">
+            <h3>Minha avaliação clínica e nutricional</h3>
+            <p>A avaliação que eu faço se baseia em 4 métodos: 
+                <ul>
+                    <li><b>Exame da História</b> detalhado do(a) paciente</li>
+                    <li><b>Exame Físico</b> completo, da cabeça aos pés</li>
+                    <li><b>Exame Antropométrico</b> das medidas e composição corporal</li>
+                    <li><b>Exame Laboratorial</b> através de exames de sangue, urina e fezes</li>
+                </ul>
+            </p>
+            <p>
+                Com a avaliação minunciosa que eu faço, consigo determinar com segurança o <b>Diagnóstico Nutricional</b> dos pacientes.<br><br>
+                Utilizo uma <b> padronização internacional</b> de diagnósticos de nutrição que vai muito além de somente obesidade e deficiências nutricionais.
+            </p><br>
+
+        </div>
+
+        <div class="about">
+            <h3>Meu tratamento</h3>
+            <p>Meu tratamento é centrado no(a) paciente e visa enxergá-lo como um todo. Prezo pelo protagonismo e autonomia do(a) paciente e busco tratar a causa do problema. <br>
+            <br>
+            Utilizo ferramentas como: 
+                <ul>
+                    <li><b>Orientações</b> que geram resultados práticos</li>
+                    <li><b>Suplementos</b> alimentares</li>
+                    <li><b>Medicamentos</b> isentos de prescrição médica à base de vitaminas e/ou minerais</li>
+                    <li><b>Fitoterápicos</b> com evidências científicas</li>
+                </ul>
+            </p><br>
+            
+
+        </div>
+        <div class="about">
+            <h3>Meu atendimento</h3>
+            <p>Meu atendimento tem no mínimo uma 1ª Consulta e uma Consulta de Revisão incluídas. </p>
+            
+            <h4>Primeira consulta</h4>
+                <p>Faço uma avaliação detalhada utilizando os 4 métodos que citei acima e te entrego orientações iniciais que serão revistas na consulta de revisão.
+                    <br>
+                    <br>
+                Depois que você sai do consultório eu reservo um tempo para investigar e conectar todas as informações que eu coletei para montar um plano terapêutico completo e eficaz. Utilizando ferramentas tecnológicas que eu mesmo desenvolvi.
+            </p>
+            
+            <h4>Consulta de revisão</h4>
+            Avalio junto com você se as orientações iniciais que nós combinamos estão sendo eficazes e entrego para você o plano terapêutico completo e individualizado. <br>
+            <br>
+            <br>
+        
+        </div>
+        <div class="about">
+            <h3>Pra quem é?</h3>
+            <p>Esses são alguns dos casos mais frequentes que eu atendo:</p>
+            
+            <h4 id="disturbiosgti">Distúrbios e Doenças Gastrointestinais</h4> 
+                <ul>
+                    <li>Refluxo e Azia (queimação atrás do peito)</li>
+                    <li>Gastrite</li>
+                    <li>Prisão de Ventre (constipação intestinal)</li>
+                    <li>Diarreia</li>
+                    <li>Náuseas, vômitos e enjôo do movimento</li>
+                    <li>Dores abdominais</li>
+                    <li>Gases e Distensão abdominal</li>
+                    <li>Indigestão</li>
+                    <li>Intolerância à lactose</li>
+                    <li>Doenças inflamatórias intestinais (Chron e RCU)</li>
+                    <LI>Doença Celíaca</LI>
+                    <li>Síndrome do intestino irritável</li>
+                    <li>Supercrescimento bacteriano do intestino delgado</li>
+                    <li>Pedra na vesícula (colelitíase)</li>
+                    <li>Pancreatite</li>
+                    <li>Disfagia</li>
+                </ul>
+                <h4>Distúrbios Metabólicos</h4>
+                <ul>
+                    <li>Diabetes, pré-diabetes e resistência à insulina</li>
+                    <li>Hipertensão</li>
+                    <li>Colesterol alto</li>
+                    <li>Obesidade e sobrepeso</li>
+                    <li>Síndrome metabólica</li>
+                    <li>Erros inatos do metabolismo</li>
+                    <li>Alterações da Tireóide</li>
+                </ul>
+                <h4>Distúrbios Urinários</h4>
+                <ul>
+                    <li>Doença Renal Crônica</li>
+                    <li>Insuficiência Renal Aguda</li>
+                    <li>Síndrome Nefrótica</li>
+                    <li>Pedra no rim (nefrolitíase)</li>
+                    <li>Síndrome metabólica</li>
+                    <li>Infecções urinárias de repetição</li>
+                    <li>Hiperplasia Prostática Benigna</li>
+                </ul>
+                <h4>Crianças e Adolescentes</h4>
+                <ul>
+                    <li>Déficit de crescimento em altura</li>
+                    <li>Dificuldade de ganho de peso</li>
+                    <li>Sobrepeso e obesidade</li>
+                    <li>Espinhas (acne)</li>
+                    <li>Seletividade alimentar</li>
+                    <li>Aversão alimentar</li>
+                    <li>Parasitoses intestinais (vermes)</li>
+                    <li>Deficiência de ferro e anemias</li>
+                    <li>Ansiedade</li>
+                </ul>
+                <h4>Transtorno do Espectro Autista com:</h4>
+                <ul>
+                    <li>Seletividade alimentar</li>
+                    <li>Aversão alimentar</li>
+                    <li><a href="#disturbiosgti">Distúrbios gastrointestinais</a></li>
+                </ul>
+                <h4>Transtornos Alimentares</h4>
+                <ul>
+                    <li>Bulimia nervosa</li>
+                    <li>Anorexia nervosa</li>
+                    <li>Transtorno Alimentar Restritivo/Evitativo</li>
+                    <li>Transtorno de Compulsão Alimentar</li>
+                    <li>Ortorexia</li>
+                </ul>
+                <h4>Idosos</h4>
+                <ul>
+                    <li>Desnutrição</li>
+                    <li>Diminuição de massa muscular e força</li>
+                    <li>Falta de Apetite</li>
+                    <li>Acamados</li>
+                    <li>Lesão por pressão</li>
+                </ul>
+                <h4>Doenças genéticas hereditárias e não hereditárias</h4>
+                <ul>
+                    <li>Cânceres</li>
+                    <li>Fenilcetonúria</li>
+                    <li>Galactosemia</li>
+                    <li>Síndrome de Down</li>
+                </ul>
+                <h4>Dores Crônicas</h4>
+                <ul>
+                    <li>Osteoartrite</li>
+                    <li>Fibromialgia</li>
+                    <li>Enxaqueca (migrânea)</li>
+                    <li>Neuralgia do trigêmeo</li>
+                </ul>
+                <h4>Outras situações que atrapalham a qualidade de vida</h4>
+                <ul>
+                    <li>Distúrbios do Sono</li>
+                    <li>Distúrbios Respiratórios de repetição</li>
+                    <li>Alergias Alimentares</li>
+                    <li>Sintomas da Menopausa</li>
+                </ul>
+                <h4>Gravidez e Amamentação</h4>
+                <ul>
+                    <li>Acompanhamento do desenvolvimento fetal</li>
+                    <li>Correção de deficiênicas</li>
+                    <li>Auxílio na produção de leite</li>
+                    <li>Prescrição de fórmulas infantis em casos onde o leite mateno não for possível ou suficiente</li>
+                </ul>
+                <p></p>
+            
+        
+    </div><!--.main-->
         <div class="projetos">
             <div>
                 <h3>Projetos</h3>
