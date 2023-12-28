@@ -14,6 +14,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
+    
+        
+
+        function dropMenu(){
+            var dropdownMenuList = window.document.getElementById("dropdownMenuList");
+             var dropdownMenuButton = window.document.getElementById("dropdownMenuButton");
+
+            if (dropdownMenuList.style.display != "flex"){
+                dropdownMenuList.style.display="flex";
+                dropdownMenuButton.style.backgroundColor="darkblue";
+                dropdownMenuButton.style.color="#fff";
+            }else{
+                dropdownMenuList.style.display="none";
+                dropdownMenuButton.style.backgroundColor="transparent";
+                dropdownMenuButton.style.color="#1E3050";
+            }
+         }
+            
+         
+
+       
+            
+               
+            
+            
+    </script>
+    <script>
         
             function menuIdioma (){
                 var contentIdioma = window.document.getElementById("contentIdioma");
@@ -112,8 +139,18 @@
         justify-content: center;
       }
 
-      p, h1, h2, h3{
+      p, h1, h2, h3, h4, li{
         color: #1E3050;
+      }
+
+      h2{
+        font-size: 2em;
+      }
+      h3{
+        font-size: 1.5em;
+      }
+      h4{
+        font-size: 1.1em;
       }
 
       a{
@@ -159,18 +196,55 @@
         justify-content: center;
       }
 
-      .header::after{
-        content: '';
+      .dropdownMenuButton{
         display: inline-block;
-        width: 1.8rem;
-        height: 1.8rem;
         top: 1rem;
         right: 1rem;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url(icons/more.png);
         position: absolute;
         cursor: pointer;
+        background-color: transparent;
+        padding: 0.5em;
+        border: none;
+        font-size: 1.5em;
+        border-radius: 0.3em;
+      }
+      .dropdownMenuList{
+        top: 50px;
+        width: 90%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        z-index: 999;
+      }
+      .dropMenu{
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+        align-items: center;
+        border-radius: 0.4em;
+        background-color: #fff;
+        max-width: max-content;
+      }
+      .dropMenu ul{
+        padding: 0;
+      }
+      .dropdownMenuList a{
+        text-decoration: none;
+      }
+      .dropdownMenuList li{
+        list-style: none;
+      }
+      .dropdownMenuList a{
+        display: block;
+        padding: 1em 2em;
+        list-style: none;
+        color: #1E3050;
+        background-color: #fff;
+      }
+      .dropdownMenuList a:hover{
+        background-color: #0a66c2;
+        color: #fff;
       }
 
       .header .myPhoto{
@@ -221,10 +295,10 @@
         border-radius: 1rem;
         color: #1E3050;
         text-align: left;
-        
-        
- overflow: hidden !important;
- text-overflow: ellipsis;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
     }
     .acordeon .trigger:hover{
         color: #fff;
@@ -248,15 +322,63 @@
         font-size: 0.8rem;
         margin-bottom: 2rem;
     }
+    .acordeon .content li, .acordeon .content h4, .acordeon .content p{
+        color: #fff;
+    } 
 
     .acordeon .content li{
         font-weight: bold;
     }
 
     
-
+    .actionButton{
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        text-align: center;
+        justify-self: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        border-radius: 1rem;
+        color: #1E3050;
+        text-align: left;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+        }
+    .actionButton a, a::selection, a:hover{
+        text-decoration: none;
+        color: #1E3050;
+    }
+    .actionDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
     
-
+    .acordeon .triggerPerguntas{
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.8rem;
+        background-color: transparent;
+        border: none;
+        border-radius: 1rem;
+        color: #1E3050;
+        text-align: left;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+    }
+    .acordeon .triggerPerguntas i{
+        padding-left: 0.4em;
+    }
    
 
     @media only screen and (min-width: 768px) {
@@ -297,6 +419,20 @@
 </head>
 <body>
     <div class="mainHeader">
+        <button class="dropdownMenuButton drop"  id="dropdownMenuButton" onclick="dropMenu()"><i class="fa-solid fa-bars drop"></i></button>
+        <div id="dropdownMenuList" class="dropdownMenuList drop">
+            <div class="dropMenu" onclick="dropMenu()">
+                <ul >
+                    <li><a href="#sobreMim">Sobre mim</a></li>
+                    <li><a href="#Avaliacao">Avaliação</a></li>
+                    <li><a href="#tratamento">Tratamento</a></li>
+                    <li><a href="#atendimento">Atendimento</a></li>
+                    <li><a href="#publicoAlvo">Público-alvo</a></li>
+                    <li><a href="#perguntasFrequentes">Perguntas frequentes</a></li>
+                </ul>
+            </div>
+            
+        </div>
         <header class="header">
             <img src="myPhoto.png" alt="foto de Alan" class="myPhoto">
             <div class="nameANDinformation">
@@ -332,9 +468,6 @@
             <div>
                 <h3>Formação</h3>
                 <p>uma das maiores cargas horárias para curso de nutrição do país</p>
-            </div>
-            <div>
-                <h3>Pra quem é meu atendimento</h3>
             </div>
         </section>
 
@@ -411,17 +544,17 @@
 
     <div class="main">
     <main>
-        <div class="about">
+        <div id="sobreMim" class="about">
             <h3>Sobre mim</h3>
-            <p>Sou Estudante de Nutrição (UNEB) e ajudo pessoas a lidar com diversos problemas de saúde e ter mais saúde e qualidade de vida. <br>
+            <p>Sou Estudante de Nutrição (UNEB) e ajudo pessoas a lidar com diversos desafios e problemas de saúde e ter mais saúde e qualidade de vida. <br>
             </p>
             <p>Gosto de estudar Desenvolvimento Web. Criei, em parceria com colaboradores, diversas soluções tecnológicas aplicadas à saúde. <br><br>
             Com as ferramentas que eu crio, consigo fazer uma análise mais <b>precisa</b> e <b>eficiente</b> da situação clínica e nutricional dos pacientes que atendo para escolher o melhor tratamento.</p><br>
 
         </div>
 
-        <div class="about">
-            <h3>Minha avaliação clínica e nutricional</h3>
+        <div class="about" id="Avaliacao">
+            <h3>Minha Avaliação Clínica e Nutricional</h3>
             <p>A avaliação que eu faço se baseia em 4 métodos: 
                 <ul>
                     <li><b>Exame da História</b> detalhado do(a) paciente</li>
@@ -437,14 +570,14 @@
 
         </div>
 
-        <div class="about">
-            <h3>Meu tratamento</h3>
-            <p>Meu tratamento é centrado no(a) paciente e visa enxergá-lo como um todo. Prezo pelo protagonismo e autonomia do(a) paciente e busco tratar a causa do problema. <br>
+        <div id="tratamento" class="about">
+            <h3>Meu Tratamento</h3>
+            <p>Meu tratamento é centrado no(a) paciente e visa enxergá-lo como um todo. Prezo pelo seu protagonismo e autonomia e busco tratar a causa do problema. <br>
             <br>
             Utilizo ferramentas como: 
                 <ul>
                     <li><b>Orientações</b> que geram resultados práticos</li>
-                    <li><b>Suplementos</b> alimentares</li>
+                    <li><b>Suplementos</b>, como nutrientes, compostos bioativos, enzimas, pré e probiótícos</li>
                     <li><b>Medicamentos</b> isentos de prescrição médica à base de vitaminas e/ou minerais</li>
                     <li><b>Fitoterápicos</b> com evidências científicas</li>
                 </ul>
@@ -452,24 +585,27 @@
             
 
         </div>
-        <div class="about">
-            <h3>Meu atendimento</h3>
+        <div id="atendimento" class="about">
+            <h3>Meu Atendimento</h3>
             <p>Meu atendimento tem no mínimo uma 1ª Consulta e uma Consulta de Revisão incluídas. </p>
-            
+            <br>
             <h4>Primeira consulta</h4>
-                <p>Faço uma avaliação detalhada utilizando os 4 métodos que citei acima e te entrego orientações iniciais que serão revistas na consulta de revisão.
+                <p>Faço uma avaliação detalhada utilizando os 4 métodos que citei acima e te entrego orientações iniciais que serão revistas na consulta de revisão. Nessa consulta também costumo solicitar exames se for necessário.
                     <br>
                     <br>
                 Depois que você sai do consultório eu reservo um tempo para investigar e conectar todas as informações que eu coletei para montar um plano terapêutico completo e eficaz. Utilizando ferramentas tecnológicas que eu mesmo desenvolvi.
             </p>
-            
-            <h4>Consulta de revisão</h4>
-            Avalio junto com você se as orientações iniciais que nós combinamos estão sendo eficazes e entrego para você o plano terapêutico completo e individualizado. <br>
+            <br>
+            <h4>Consulta de Revisão</h4>
+            <p>Avalio junto com você se as orientações iniciais que nós combinamos estão sendo eficazes e entrego para você o plano terapêutico completo e individualizado.</p>
+            <br>
+            <h4>Consultas de Acompanhamento</h4>
+            Essas consultas são em geral mais espaçadas e servem para darmos continuidade no tratamento. Casos mais complexos requerem mais tempo de tratamento.<br>
             <br>
             <br>
         
         </div>
-        <div class="about">
+        <div id="publicoAlvo" class="about">
             <h3>Pra quem é?</h3>
             <p>Esses são alguns dos casos mais frequentes que eu atendo:</p>
             
@@ -551,7 +687,6 @@
                     <li>Cânceres</li>
                     <li>Fenilcetonúria</li>
                     <li>Galactosemia</li>
-                    <li>Síndrome de Down</li>
                 </ul>
                 <h4>Dores Crônicas</h4>
                 <ul>
@@ -571,12 +706,39 @@
                 <ul>
                     <li>Acompanhamento do desenvolvimento fetal</li>
                     <li>Correção de deficiênicas</li>
-                    <li>Auxílio na produção de leite</li>
+                    <li>Auxílio na produção de leite materno</li>
                     <li>Prescrição de fórmulas infantis em casos onde o leite mateno não for possível ou suficiente</li>
                 </ul>
-                <p></p>
-            
-        
+                <br>
+                <p>O desafio que você enfrenta pode não estar nessa lista, mas você	pode perguntar pra mim se eu consigo te ajudar.</p>
+                
+                <div class="actionDiv">
+                    <button class="actionButton"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
+                </div>
+
+                <h3>Perguntas Frequentes</h3>
+                <section class="acordeon" id="acordeonPerguntas"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas" onclick="menuPerguntas()">
+                        <div>
+                            Quanto tempo duram as consultas?
+                        </div>
+                        <i id="menuArrowPerguntas" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas">
+                        <ul>
+                            <li>Hospital Português</li>
+                            <p>Estágio <br>
+                            nov 2022 - Atualmente · 1a 2m</p>
+                                          
+                            <li>Clínica da Dor (UNEB)</li>
+                            <p>Estágio <br>
+                            Abr 2021 - Jul 2022 · 1a 4m</p>
+                        </ul>
+                        
+                    </div>
+                    
+                </section>
     </div><!--.main-->
         <div class="projetos">
             <div>
