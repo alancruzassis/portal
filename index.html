@@ -126,6 +126,28 @@
 
             }
             
+            function menuPerguntas1 (){
+                var contentPerguntas1 = window.document.getElementById("contentPerguntas1");
+                var acordeonPerguntas1 = window.document.getElementById("acordeonPerguntas1");
+                var triggerPerguntas1 = window.document.getElementById("triggerPerguntas1");
+                var menuArrowPerguntas1 = window.document.getElementById("menuArrowPerguntas1");
+
+                if(contentPerguntas1.style.display!="block"){
+                    contentPerguntas1.style.display="block";
+                    menuArrowPerguntas1.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas1.style.display="none";
+                    menuArrowPerguntas1.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
     </script>
     
     <style>
@@ -383,7 +405,24 @@
     .acordeon .triggerPerguntas i{
         padding-left: 0.4em;
     }
+    .acordeon .triggerPerguntas:hover{
+        color: #fff;
+        background-color: #1E3050;
+    }
    
+    .perguntas .content{
+        color: #1E3050;
+        background-color: transparent;
+        border: none;
+    }
+    .perguntas{
+        border: none;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+    }
+    .perguntas .content p, .perguntas .content li, .perguntas .content h3{
+        color: #1E3050;
+        background-color: #fff;
+    }
 
     @media only screen and (min-width: 768px) {
        
@@ -560,12 +599,12 @@
         <div class="about" id="Avaliacao">
             <h3>Minha Avaliação Clínica e Nutricional</h3>
             <p>A avaliação que eu faço se baseia em 4 métodos: 
-                <ul>
+                <ol>
                     <li><b>Exame da História</b> detalhado do(a) paciente</li>
                     <li><b>Exame Físico</b> completo, da cabeça aos pés</li>
                     <li><b>Exame Antropométrico</b> das medidas e composição corporal</li>
                     <li><b>Exame Laboratorial</b> através de exames de sangue, urina e fezes</li>
-                </ul>
+                </ol>
             </p>
             <p>
                 Com a avaliação minunciosa que eu faço, consigo determinar com segurança o <b>Diagnóstico Nutricional</b> dos pacientes.<br><br>
@@ -591,10 +630,12 @@
         </div>
         <div id="atendimento" class="about">
             <h3>Meu Atendimento</h3>
-            <p>Meu atendimento tem no mínimo uma 1ª Consulta e uma Consulta de Revisão incluídas. </p>
+            <h4>Questionário Pré-Consulta</h4>
+            <p>Assim que você agenda a primeira consulta eu te mando um <b>questionário online</b> com perguntas mais simples e burocráticas da minha Anamnese que podem ser respondidas fora do consultório.</p>
+            <p>Respondendo a perguntas como <i>nome completo, data de nascimento, telefone, endereço, escolaridade, alergias...</i> a gente consegue ter <b>mais tempo para conversar</b> sobre o que mais importa.</p>
             <br>
             <h4>Primeira consulta</h4>
-                <p>Faço uma avaliação detalhada utilizando os 4 métodos que citei acima e te entrego orientações iniciais que serão revistas na consulta de revisão. Nessa consulta também costumo solicitar exames se for necessário.
+                <p>Nessa primeira consulta eu faço uma avaliação detalhada utilizando os 4 métodos que citei <a href="#tratamento">acima</a> e te entrego orientações iniciais que serão revistas na consulta de revisão. Nessa consulta também costumo solicitar exames se for necessário.
                     <br>
                     <br>
                 Depois que você sai do consultório eu reservo um tempo para investigar e conectar todas as informações que eu coletei para montar um plano terapêutico completo e eficaz. Utilizando ferramentas tecnológicas que eu mesmo desenvolvi.
@@ -706,10 +747,12 @@
                     <li>Alergias Alimentares</li>
                     <li>Sintomas da Menopausa</li>
                 </ul>
-                <h4>Gravidez e Amamentação</h4>
+                <h4>Gravidez e Aleitamento</h4>
                 <ul>
                     <li>Acompanhamento do desenvolvimento fetal</li>
                     <li>Correção de deficiênicas</li>
+                    <li>Diabetes Gestacional</li>
+                    <li>Doença Hipertensiva Específica da Gravidez</li>
                     <li>Auxílio na produção de leite materno</li>
                     <li>Prescrição de fórmulas infantis em casos onde o leite mateno não for possível ou suficiente</li>
                 </ul>
@@ -720,29 +763,53 @@
                     <button class="actionButton"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
                 </div>
 
+                <h3>O que</h3>
+
                 <h3>Perguntas Frequentes</h3>
-                <section class="acordeon" id="acordeonPerguntas"> 
-                    <button class="triggerPerguntas" id="triggerPerguntas" onclick="menuPerguntas()">
+                <section class="acordeon perguntas" id="acordeonPerguntas1"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas1" onclick="menuPerguntas1()">
                         <div>
                             Quanto tempo duram as consultas?
                         </div>
-                        <i id="menuArrowPerguntas" class="fa-solid fa-chevron-down"></i>
+                        <i id="menuArrowPerguntas1" class="fa-solid fa-chevron-down"></i>
                     </button>
                     
-                    <div class="content" id="contentPerguntas">
-                        <ul>
-                            <li>Hospital Português</li>
-                            <p>Estágio <br>
-                            nov 2022 - Atualmente · 1a 2m</p>
-                                          
-                            <li>Clínica da Dor (UNEB)</li>
-                            <p>Estágio <br>
-                            Abr 2021 - Jul 2022 · 1a 4m</p>
-                        </ul>
-                        
+                    <div class="content" id="contentPerguntas1">
+                        <p>A 1ª consulta dura pelo menos 01:30 h, a consulta de retorno dura pelo menos 30 min e as demais consultas de acompanhamento duram pelo menos 01:00h.</p>
                     </div>
                     
                 </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas2"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas2" onclick="menuPerguntas2()">
+                        <div>
+                            Qual o valor do atendimento?
+                        </div>
+                        <i id="menuArrowPerguntas2" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas2">
+                        <p>O valor do atendimento varia conforme as clínicas. Confira os valores entrando em contato com as clínicas. Você também pode conseguir descontos a depender das condições de pagamento.</p>
+                    </div>
+                    
+                </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas3"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas3" onclick="menuPerguntas3()">
+                        <div>
+                            Tenho diabetes, você vai me proibir de comer açúcar?
+                        </div>
+                        <i id="menuArrowPerguntas3" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas3">
+                        <p>Eu não proíbo ninguém de nada, prezo pelo protagonismo do paciente. Além disso a Sociedade Brasileira de Diabetes recomenda que pessoas com diabetes possam consumir até 5% das necessidades energéticas diárias provenientes de açúcar.</p>
+
+                        <p>Não acredite em quem só sabe o que é senso comum.</p>   
+                    </div>
+                    
+                </section>
+
     </div><!--.main-->
         <div class="projetos">
             <div>
