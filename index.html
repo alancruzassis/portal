@@ -125,6 +125,90 @@
                 }
 
             }
+            function menuFormacao (){
+                var contentFormacao = window.document.getElementById("contentFormacao");
+                var acordeonFormacao = window.document.getElementById("acordeonFormacao");
+                var triggerFormacao = window.document.getElementById("triggerFormacao");
+                var menuArrowFormacao = window.document.getElementById("menuArrowFormacao");
+
+                if(contentFormacao.style.display!="block"){
+                    contentFormacao.style.display="block";
+                    contentFormacao.style.backgroundColor="#1E3050";
+                    menuArrowFormacao.className="fa-solid fa-chevron-up";
+                    acordeonFormacao.style.backgroundColor = "#1E3050";
+                    acordeonFormacao.style.color = "#fff";
+
+                    triggerFormacao.addEventListener('mouseout', () => {
+                        // Change the button's  color
+                        triggerFormacao.style.backgroundColor = "#1E3050";
+                        triggerFormacao.style.color = "#fff";
+                    });
+
+                    
+                }else{
+                    contentFormacao.style.display="none";
+                    menuArrowFormacao.className="fa-solid fa-chevron-down";
+                    contentFormacao.style.backgroundColor="#fff";
+                                      
+                    triggerFormacao.addEventListener('mouseover', () => {
+                        // Change the button's background color
+                        triggerFormacao.style.backgroundColor = "#1E3050";
+                        triggerFormacao.style.color = "#fff";
+                    });
+
+                    triggerFormacao.addEventListener('mouseout', () => {
+                        // Change the button's background color
+                        triggerFormacao.style.backgroundColor = "#fff";
+                        triggerFormacao.style.color = "#1E3050";
+                        acordeonFormacao.style.backgroundColor = "#1E3050";
+                    });
+                    
+                }
+
+            }
+
+            function menuCursos (){
+                var contentCursos = window.document.getElementById("contentCursos");
+                var acordeonCursos = window.document.getElementById("acordeonCursos");
+                var triggerCursos = window.document.getElementById("triggerCursos");
+                var menuArrowCursos = window.document.getElementById("menuArrowCursos");
+
+                if(contentCursos.style.display!="block"){
+                    contentCursos.style.display="block";
+                    contentCursos.style.backgroundColor="#1E3050";
+                    menuArrowCursos.className="fa-solid fa-chevron-up";
+                    acordeonCursos.style.backgroundColor = "#1E3050";
+                    acordeonCursos.style.color = "#fff";
+
+                    triggerCursos.addEventListener('mouseout', () => {
+                        // Change the button's  color
+                        triggerCursos.style.backgroundColor = "#1E3050";
+                        triggerCursos.style.color = "#fff";
+                    });
+
+                    
+                }else{
+                    contentCursos.style.display="none";
+                    menuArrowCursos.className="fa-solid fa-chevron-down";
+                    contentCursos.style.backgroundColor="#fff";
+                                      
+                    triggerCursos.addEventListener('mouseover', () => {
+                        // Change the button's background color
+                        triggerCursos.style.backgroundColor = "#1E3050";
+                        triggerCursos.style.color = "#fff";
+                    });
+
+                    triggerCursos.addEventListener('mouseout', () => {
+                        // Change the button's background color
+                        triggerCursos.style.backgroundColor = "#fff";
+                        triggerCursos.style.color = "#1E3050";
+                        acordeonCursos.style.backgroundColor = "#1E3050";
+                    });
+                    
+                }
+
+            }
+
             
             function menuPerguntas1 (){
                 var contentPerguntas1 = window.document.getElementById("contentPerguntas1");
@@ -142,6 +226,72 @@
                 }else{
                     contentPerguntas1.style.display="none";
                     menuArrowPerguntas1.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas2 (){
+                var contentPerguntas2 = window.document.getElementById("contentPerguntas2");
+                var acordeonPerguntas2 = window.document.getElementById("acordeonPerguntas2");
+                var triggerPerguntas2 = window.document.getElementById("triggerPerguntas2");
+                var menuArrowPerguntas2 = window.document.getElementById("menuArrowPerguntas2");
+
+                if(contentPerguntas2.style.display!="block"){
+                    contentPerguntas2.style.display="block";
+                    menuArrowPerguntas2.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas2.style.display="none";
+                    menuArrowPerguntas2.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas3 (){
+                var contentPerguntas3 = window.document.getElementById("contentPerguntas3");
+                var acordeonPerguntas3 = window.document.getElementById("acordeonPerguntas3");
+                var triggerPerguntas3 = window.document.getElementById("triggerPerguntas3");
+                var menuArrowPerguntas3 = window.document.getElementById("menuArrowPerguntas3");
+
+                if(contentPerguntas3.style.display!="block"){
+                    contentPerguntas3.style.display="block";
+                    menuArrowPerguntas3.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas3.style.display="none";
+                    menuArrowPerguntas3.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas4 (){
+                var contentPerguntas4 = window.document.getElementById("contentPerguntas4");
+                var acordeonPerguntas4 = window.document.getElementById("acordeonPerguntas4");
+                var triggerPerguntas4 = window.document.getElementById("triggerPerguntas4");
+                var menuArrowPerguntas4 = window.document.getElementById("menuArrowPerguntas4");
+
+                if(contentPerguntas4.style.display!="block"){
+                    contentPerguntas4.style.display="block";
+                    menuArrowPerguntas4.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas4.style.display="none";
+                    menuArrowPerguntas4.className="fa-solid fa-chevron-down";
                                       
                    
                     
@@ -423,6 +573,15 @@
         color: #1E3050;
         background-color: #fff;
     }
+    .whatsapp:hover, .whatsapp::selection{
+        border-radius: 1.2em;
+        background-color: #41c352;
+        color: #fff;
+        a{
+            color: #fff;
+        }
+    }
+    
 
     @media only screen and (min-width: 768px) {
        
@@ -499,18 +658,11 @@
 
         
         <section>
-            <button type="button">
-                Skills
-            </button>
             <div>
                 <h3>Habilidades técnicas</h3>
             </div>
             <div>
                 <h3>Soft skills</h3>
-            </div>
-            <div>
-                <h3>Formação</h3>
-                <p>uma das maiores cargas horárias para curso de nutrição do país</p>
             </div>
         </section>
 
@@ -560,6 +712,31 @@
             </div>
             
         </section>
+        <section class="acordeon" id="acordeonFormacao"> 
+            <button class="trigger" id="triggerFormacao" onclick="menuFormacao()">
+                <div>
+                    <i class="fa-solid fa-graduation-cap"></i> Formação 
+                    
+                </div>
+                <i id="menuArrowFormacao" class="fa-solid fa-chevron-down"></i>
+            </button>
+            
+            <div class="content" id="contentFormacao">
+                <ul>
+                    <li>Bacharelado em Nutrição</li>
+                    <p>Universidade do Estado da Bahia - UNEB<br>
+                    2018 - Atualmente · 5a 10m <br><br>
+                    Uma das maiores cargas-horárias para curso de nutrição do país com 4.685h.
+                    </p>
+                                  
+                    <li>Ensino Médio</li>
+                    <p>Colégio Adventista da Bahia<br>
+                    2017</p>
+                </ul>
+                
+            </div>
+            
+        </section>
         <section class="acordeon" id="acordeonCursos"> 
             <button class="trigger" id="triggerCursos" onclick="menuCursos()">
                 <div>
@@ -571,13 +748,32 @@
             
             <div class="content" id="contentCursos">
                 <ul>
-                    <li>Hospital Português</li>
-                    <p>Estágio <br>
-                    nov 2022 - Atualmente · 1a 2m</p>
+                    <li>Hemograma, Anemia e Linfadenopatia</li>
+                    <p>Universidade Federal de Ciências da Saúde / UNASUS <br>
+                    Dez 2019 a Jan 2020</p>
                                   
-                    <li>Clínica da Dor (UNEB)</li>
-                    <p>Estágio <br>
-                    Abr 2021 - Jul 2022 · 1a 4m</p>
+                    <li>Solicitação, Avaliação e Interpretação de Exames Bioquímicos</li>
+                    <p>Núcleo Viver<br>
+                    Nov 2019</p>
+
+                    <li>Síndrome Gripal e COVID-19</li>
+                    <p>Instituto Sírio Libanês de Ensino e Pesquisa<br>
+                    </p>
+
+                    <li>Antropometria e Composição Corporal</li>
+                    <p>UNEB<br>
+                    Set 2019
+                    </p>
+
+                    <li>Alergia alimentar na prática clínica</li>
+                    <p>Qualificar Cursos & Eventos<br>
+                    Mai 2019
+                    </p>
+
+                    <li>Doenças do Aparelho Digestivo</li>
+                    <p>Fiocruz Mato Grosso do Sul / UNASUS<br>
+                    Mai 2019
+                    </p>
                 </ul>
                 
             </div>
@@ -740,6 +936,12 @@
                     <li>Enxaqueca (migrânea)</li>
                     <li>Neuralgia do trigêmeo</li>
                 </ul>
+                <h4>Cirurgias</h4>
+                <ul>
+                    <li>Cirurgias orais</li>
+                    <li>Cirurgias gastrointestinais</li>
+                    <li>Cirurgias de grande porte</li>
+                </ul>
                 <h4>Outras situações que atrapalham a qualidade de vida</h4>
                 <ul>
                     <li>Distúrbios do Sono</li>
@@ -760,10 +962,8 @@
                 <p>O desafio que você enfrenta pode não estar nessa lista, mas você	pode perguntar pra mim se eu consigo te ajudar.</p>
                 
                 <div class="actionDiv">
-                    <button class="actionButton"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
+                    <button class="actionButton whatsapp"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
                 </div>
-
-                <h3>O que</h3>
 
                 <h3>Perguntas Frequentes</h3>
                 <section class="acordeon perguntas" id="acordeonPerguntas1"> 
@@ -803,7 +1003,22 @@
                     </button>
                     
                     <div class="content" id="contentPerguntas3">
-                        <p>Eu não proíbo ninguém de nada, prezo pelo protagonismo do paciente. Além disso a Sociedade Brasileira de Diabetes recomenda que pessoas com diabetes possam consumir até 5% das necessidades energéticas diárias provenientes de açúcar.</p>
+                        <p>Eu não proíbo ninguém de nada, prezo pelo protagonismo do paciente. Além disso, a Sociedade Brasileira de Diabetes recomenda que pessoas com diabetes possam consumir até 5% das necessidades energéticas diárias provenientes de açúcar.</p>
+
+                        <p>Não acredite em quem só sabe o que é senso comum.</p>   
+                    </div>
+                </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas4"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas4" onclick="menuPerguntas4()">
+                        <div>
+                            Quanto tempo entre a primeira consulta e a consulta de retorno?
+                        </div>
+                        <i id="menuArrowPerguntas4" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas4">
+                        <p>Depende da frequência com que eu atendo nas clínicas,, mas em geral você tem 30 dias para fazer essa consulta sem custo adicional.</p>
 
                         <p>Não acredite em quem só sabe o que é senso comum.</p>   
                     </div>
