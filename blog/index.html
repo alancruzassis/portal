@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family='open sans':wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        
+    <style>
+
+      *{
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      } 
+
+      body{
+        justify-content: center;
+      }
+
+      p, h1, h2, h3, h4, li{
+        color: #1E3050;
+      }
+      h1{
+        font-size: 1.7em;
+        font-weight: 400;
+      }
+
+      h2{
+        font-size: 1.5em;
+      }
+      h3{
+        font-size: 1.1em;
+      }
+      h4{
+        font-size: 0.9em;
+      }
+      h5{
+        font-size: 0.7em;
+      }
+
+      a{
+        color: #1E3050;
+      }
+
+      a:hover, a:active{
+        color: #0a66c2;
+      }
+
+      main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1em;
+        max-width: 900px;
+        line-height: 1.8;
+      }
+      main li{
+        margin-bottom: 0.5em;
+      }
+      .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .mainHeader{
+        padding: 1rem;
+        margin: .5rem;
+        border: 1px solid #1E3050;
+        border-radius: 1rem;
+        position: relative;     
+      }
+
+      .mainHeader .acordeon{
+        margin: 0 0 0.5em 0;
+      }
+      
+      .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .dropdownMenuButton{
+        color: #1E3050;
+        display: inline-block;
+        top: 1rem;
+        right: 1rem;
+        position: absolute;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 0.5em;
+        border: none;
+        font-size: 1.5em;
+        border-radius: 0.3em;
+      }
+      .dropdownMenuList{
+        top: 50px;
+        width: 90%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        z-index: 999;
+      }
+      .dropMenu{
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+        align-items: center;
+        border-radius: 0.4em;
+        background-color: #fff;
+        max-width: max-content;
+      }
+      .dropMenu ul{
+        padding: 0;
+      }
+      .dropdownMenuList a{
+        text-decoration: none;
+      }
+      .dropdownMenuList li{
+        list-style: none;
+      }
+      .dropdownMenuList a{
+        display: block;
+        padding: 1em 2em;
+        list-style: none;
+        color: #1E3050;
+        background-color: #fff;
+      }
+      .dropdownMenuList a:hover{
+        background-color: #0a66c2;
+        color: #fff;
+      }
+
+      .header .myPhoto{
+        width: 200px;
+        border-radius: 50%;
+      }
+
+      .header h1{
+        font-weight: 400;    
+        text-align: center;
+      }
+
+      .header h1 .font-weight-600{
+        font-weight: 600;    
+        text-align: center;
+      }
+
+    .information p{
+        font-size: 1.15rem;
+    }
+   
+    
+
+  
+
+
+    .acordeon{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid #1E3050;
+        border-radius: 1.1rem;
+        color: #1E3050;
+    }
+
+    
+
+    .acordeon .trigger{
+        font-size: 1.5rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: transparent;
+        border: none;
+        border-radius: 1rem;
+        color: #1E3050;
+        text-align: left;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+    }
+    .acordeon .trigger:hover{
+        color: #fff;
+        background-color: #1E3050;
+        display: flex;
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    .acordeon .content{
+        display: none;
+        color: #fff;
+        background-color: #1E3050;
+        line-height: 1.5;
+        padding: 1rem;
+        border-radius: 0 0 1rem 1rem ;
+    }
+
+    .acordeon .content p{
+        color: #fff;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+    }
+    .acordeon .content li, .acordeon .content h4, .acordeon .content p{
+        color: #fff;
+    } 
+
+    .acordeon .content li{
+        font-weight: bold;
+    }
+
+    
+    .actionButton{
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        text-align: center;
+        justify-self: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        border-radius: 1rem;
+        color: #1E3050;
+        text-align: left;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+        }
+    .actionButton a, a::selection, a:hover{
+        text-decoration: none;
+        color: #1E3050;
+    }
+    .actionDiv{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    .acordeon .triggerPerguntas{
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.8rem;
+        background-color: transparent;
+        border: none;
+        border-radius: 1rem;
+        color: #1E3050;
+        text-align: left;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+    }
+    .acordeon .triggerPerguntas i{
+        padding-left: 0.4em;
+    }
+    .acordeon .triggerPerguntas:hover{
+        color: #fff;
+        background-color: #1E3050;
+    }
+   
+    .perguntas .content{
+        color: #1E3050;
+        background-color: transparent;
+        border: none;
+    }
+    .perguntas{
+        border: none;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
+    }
+    .perguntas .content p, .perguntas .content li, .perguntas .content h3{
+        color: #1E3050;
+        background-color: #fff;
+    }
+    .whatsapp:hover, .whatsapp::selection{
+        border-radius: 1.2em;
+        background-color: #41c352;
+        color: #fff;
+        a{
+            color: #fff;
+        }
+    }
+
+    figure{
+        margin: 0;
+    }
+    
+    #imgList{
+        width: 350px;
+    }
+
+    @media only screen and (min-width: 768px) {
+       
+
+        .mainHeader{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1024px;
+            margin: 1rem auto;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: row;
+        }
+        .header .nameANDinformation{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header h1{
+            text-align: left;   
+        }
+
+        .header .myPhoto{
+            margin-right: 2rem; 
+            width: 232px;
+        }
+
+        .information p{
+        font-size: 1.1rem;
+    }
+    }
+    </style>
+
+</head>
+<body>
+        <header class="header">
+           
+        </header>
+    
+    <div class="main">
+    <main>
+        <div class="nameANDinformation">
+                <h1>Como se preparar para a consulta com o nutricionista</h1>
+            </div>
+            <figure>
+                <img src="list.jpg" id="imgList" alt="desenho de uma lista">
+                <p style="font-size: 0.5em;">Imagem: Freepik</p>
+            </figure>
+        <div id="sobreMim" class="about">
+            <p>Preparar-se adequadamente para a sua primeira consulta com o nutricionista é fundamental para otimizar o tempo e garantir uma experiência mais produtiva. Aqui estão algumas dicas úteis que elaborei com base no meu modelo de atendimento:
+            <br>
+            </p>
+            <ol>
+                <h3><li>Histórico clínico</li></h3>
+                <ul>
+                    <li>Traga com você seu histórico de saúde completo, incluindo quaisquer condições médicas, cirurgias anteriores, alergias, medicamentos em uso e resultados de exames recentes.</li>
+                </ul>
+                <h3><li>Objetivos e Expectativas</li></h3>
+                <ul>
+                    <li>Tenha em mente seus objetivos específicos em relação à saúde e à nutrição. Pense sobre o que espera alcançar com a ajuda do nutricionista.</li>
+                </ul>
+                <h3><li>Lista de Perguntas</li></h3>
+                <ul>
+                    <li>
+                        Elabore uma lista de perguntas ou preocupações que gostaria de discutir durante a consulta. Isso pode incluir dúvidas sobre alimentação, suplementos, plantas medicinais, sintomas, entre outros.
+                    </li>
+                </ul>
+                <h3><li>Lista de Medicamentos e Suplementos</li></h3>
+                <ul>
+                    <li>Enumere todos os medicamentos e suplementos que você está tomando. Isso inclui vitaminas, minerais ou outros produtos relacionados à saúde.</li>
+                    <li>Meu Questionário Pré-Consulta tem um espaço só pra essa lista.</li>
+                </ul>
+                <h3><li>Rotina Diária</li></h3>
+                <ul>
+                    <li>Descreva sua rotina diária, incluindo níveis de atividade física, padrões de sono e níveis de estresse. Esses fatores podem influenciar as recomendações nutricionais.</li>
+                </ul>
+                <h3><li>Preferências Alimentares e Restrições</li></h3>
+                <ul>
+                    <li>Tenha em mente suas preferências alimentares, restrições dietéticas ou restrições culturais. Isso ajudará o nutricionista a personalizar seu plano alimentar de acordo com suas necessidades.</li>
+                </ul>
+                <h3><li>Expectativas de Acompanhamento</li></h3>
+                <ul>
+                    <li>Discuta suas expectativas em relação ao acompanhamento do tratamento. Compreender a frequência das consultas e as etapas seguintes é importante para um comprometimento eficaz.</li>
+                </ul>
+                <h3><li>Roupas Confortáveis</li></h3>
+                <ul>
+                    <li>Na primeira consulta e nas consultas de acompanhamento vista roupas leves e confortáveis. Algumas consultas podem incluir medições de composição corporal e exame físico.</li>
+                </ul>
+                <h3><li>Agenda Disponível</li></h3>
+                <ul>
+                    <li>Esteja preparado para discutir sua agenda e disponibilidade para a consulta de retorno e futuras consultas de acompanhamento.</li>
+                </ul> 
+            </ol>
+            <br>
+            <p>
+                Lembre-se, a honestidade e a abertura são essenciais para uma consulta produtiva. Da porta do meu consultório para dentro não existe julgamento nem bronca, estou aqui para te apoiar na busca por uma saúde melhor, e quanto mais informações você puder fornecer, mais eficaz será a orientação que receberá.
+
+            </p>
+            
+        </div>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://kit.fontawesome.com/27d65a4a33.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
