@@ -298,6 +298,94 @@
                 }
 
             }
+            function menuPerguntas5 (){
+                var contentPerguntas5 = window.document.getElementById("contentPerguntas5");
+                var acordeonPerguntas5 = window.document.getElementById("acordeonPerguntas5");
+                var triggerPerguntas5 = window.document.getElementById("triggerPerguntas5");
+                var menuArrowPerguntas5 = window.document.getElementById("menuArrowPerguntas5");
+
+                if(contentPerguntas5.style.display!="block"){
+                    contentPerguntas5.style.display="block";
+                    menuArrowPerguntas5.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas5.style.display="none";
+                    menuArrowPerguntas5.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas6 (){
+                var contentPerguntas6 = window.document.getElementById("contentPerguntas6");
+                var acordeonPerguntas6 = window.document.getElementById("acordeonPerguntas6");
+                var triggerPerguntas6 = window.document.getElementById("triggerPerguntas6");
+                var menuArrowPerguntas6 = window.document.getElementById("menuArrowPerguntas6");
+
+                if(contentPerguntas6.style.display!="block"){
+                    contentPerguntas6.style.display="block";
+                    menuArrowPerguntas6.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas6.style.display="none";
+                    menuArrowPerguntas6.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas7 (){
+                var contentPerguntas7 = window.document.getElementById("contentPerguntas7");
+                var acordeonPerguntas7 = window.document.getElementById("acordeonPerguntas7");
+                var triggerPerguntas7 = window.document.getElementById("triggerPerguntas7");
+                var menuArrowPerguntas7 = window.document.getElementById("menuArrowPerguntas7");
+
+                if(contentPerguntas7.style.display!="block"){
+                    contentPerguntas7.style.display="block";
+                    menuArrowPerguntas7.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas7.style.display="none";
+                    menuArrowPerguntas7.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
+            function menuPerguntas8 (){
+                var contentPerguntas8 = window.document.getElementById("contentPerguntas8");
+                var acordeonPerguntas8 = window.document.getElementById("acordeonPerguntas8");
+                var triggerPerguntas8 = window.document.getElementById("triggerPerguntas8");
+                var menuArrowPerguntas8 = window.document.getElementById("menuArrowPerguntas8");
+
+                if(contentPerguntas8.style.display!="block"){
+                    contentPerguntas8.style.display="block";
+                    menuArrowPerguntas8.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas8.style.display="none";
+                    menuArrowPerguntas8.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
     </script>
     
     <style>
@@ -319,7 +407,7 @@
         font-size: 2em;
       }
       h3{
-        font-size: 1.5em;
+        font-size: 1.6em;
       }
       h4{
         font-size: 1.1em;
@@ -582,7 +670,56 @@
         }
     }
     
+    .tratamentoItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #1E3050;
+        border-radius: 1.1em;
+        padding: 1rem;
+        margin: 0.5rem 0.2rem;
+        text-align: center;
+    }
+    .tratamentoItem i{
+        font-size: 8em;
+        color: #1E3050;
+    }
+    .tratamentoItem p{
+        font-size: 1.4em;
+    }
 
+    .blogItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #1E3050;
+        border-radius: 1.1em;
+        padding: 1rem;
+        margin: 0.5rem 0.2rem;
+        text-align: center;
+    }
+    .blogItem i{
+        font-size: 8em;
+        color: #1E3050;
+    }
+    .blogItem p{
+        font-size: 1.3em;
+        margin-top: 0;
+        text-align: left;
+        margin: auto 0.5em;
+    }
+    .blogItem a{
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .blogItem figure{
+        margin: 0em;
+    }
+    .blogItem img{
+        width: 100%;
+        height: 100%;
+    }
+ 
     @media only screen and (min-width: 768px) {
        
 
@@ -614,7 +751,43 @@
 
         .information p{
         font-size: 1.1rem;
-    }
+        }
+
+        .tratamentoList{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .tratamentoItem{
+            width: 270px;
+            height: auto;
+            margin: 0.3rem 0.3rem;
+        }
+        .tratamentoItem p{
+            margin-top: 40px;
+            margin-bottom: 8px;
+        }
+
+        .avaliacao .tratamentoItem{
+            width: 290px;
+            height: auto;
+            margin: 0.3rem 0.3rem;
+        }
+
+        .blogList{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .blogItem{
+            width: 500px;
+            height: 400px;
+            margin: 0.3rem 0.3rem;
+        }
+        .blogItem img{
+            width: 300px;
+            height: auto;
+        }
     }
     </style>
 
@@ -721,12 +894,8 @@
                     <li>Bacharelado em Nutrição</li>
                     <p>Universidade do Estado da Bahia - UNEB<br>
                     2018 - Atualmente · 5a 10m <br><br>
-                    Uma das maiores cargas-horárias para curso de nutrição do país com 4.685h.
+                    Uma das maiores cargas-horárias para curso de nutrição do país com 4.685 h.
                     </p>
-                                  
-                    <li>Ensino Médio</li>
-                    <p>Colégio Adventista da Bahia<br>
-                    2017</p>
                 </ul>
                 
             </div>
@@ -780,23 +949,41 @@
     <main>
         <div id="sobreMim" class="about">
             <h3>Sobre mim</h3>
-            <p>Ajudo pessoas a lidar com diversos desafios e problemas de saúde e ter mais saúde e qualidade de vida.<br>
+            <p>Ajudo pessoas a lidar com diversos desafios de saúde e ter mais saúde e qualidade de vida.<br>
             </p>
-            <p>Criei, em parceria com colaboradores, diversas soluções tecnológicas aplicadas à saúde. <br><br>
+            <p>Amo tecnologia. Criei, em parceria com colaboradores, diversas soluções tecnológicas aplicadas à saúde. <br><br>
             Com as ferramentas que eu crio, consigo fazer uma análise mais <b>precisa</b> e <b>eficiente</b> da situação clínica e nutricional dos pacientes que atendo para escolher o melhor tratamento.</p><br>
 
         </div>
 
-        <div class="about" id="Avaliacao">
+        <div class="about avaliacao" id="Avaliacao">
             <h3>Minha Avaliação Clínica e Nutricional</h3>
             <p>A avaliação que eu faço se baseia em quatro métodos: 
-                <ol>
+                <!--<ol>
                     <li><b>Exame da História</b> detalhado do(a) paciente</li>
                     <li><b>Exame Físico</b> completo, da cabeça aos pés</li>
                     <li><b>Exame Antropométrico</b> das medidas e composição corporal</li>
                     <li><b>Exame Laboratorial</b> através de exames de sangue, urina e fezes</li>
-                </ol>
+                </ol>-->
             </p>
+            <div class="tratamentoList">
+                <div class="tratamentoItem">
+                    <div><i class="fa-regular fa-file-lines"></i></div>
+                    <p><b>Exame da História</b> detalhado do(a) paciente</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-stethoscope"></i></i></div>
+                    <p><b>Exame Físico</b> completo, da cabeça aos pés</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-ruler-vertical"></i></div>
+                    <p><b>Exame Antropométrico</b> das medidas e composição corporal</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-vial"></i></div>
+                    <p><b>Exame Laboratorial</b> através de exames de sangue, urina e fezes</p>
+                </div>
+            </div>
             <p>
                 Com a avaliação minunciosa que eu faço, consigo determinar com segurança o <b>Diagnóstico Nutricional</b> dos pacientes.<br><br>
                 Utilizo uma <b> padronização internacional</b> de diagnósticos de nutrição que vai muito além de somente obesidade e deficiências nutricionais.
@@ -806,17 +993,38 @@
 
         <div id="tratamento" class="about">
             <h3>Meu Tratamento</h3>
-            <p>Meu tratamento é centrado no(a) paciente e visa enxergá-lo como um todo. Prezo pelo seu protagonismo e autonomia e busco tratar a causa do problema. <br>
+            <p>Meu tratamento é centrado no(a) paciente e visa enxergá-lo como um todo, não só sua doença ou condição. Prezo pelo seu protagonismo e autonomia e busco tratar a causa do problema. <br>
             <br>
-            Utilizo ferramentas como: 
-                <ul>
-                    <li><b>Orientações</b> que geram resultados práticos</li>
-                    <li><b>Planos alimentares</b> personalizados</li>
-                    <li><b>Suplementos</b>, como nutrientes, compostos bioativos, enzimas, pré e probióticos</li>
-                    <li><b>Medicamentos</b> isentos de prescrição médica à base de nutrientes</li>
-                    <li><b>Fitoterápicos</b> com evidências científicas</li>
-                </ul>
-            </p><br>
+            Utilizo ferramentas como: </p>
+            <div class="tratamentoList">
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-clipboard-list"></i></div>
+                    <p><b>Orientações</b> que geram resultados práticos</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-utensils"></i></div>
+                    <p><b>Planos alimentares</b> personalizados</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-jar"></i></div>
+                    <p><b>Suplementos</b>, como nutrientes, compostos bioativos, enzimas, pré e probióticos</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-pills"></i></div>
+                    <p><b>Medicamentos</b> isentos de prescrição médica à base de nutrientes</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-leaf"></i></div>
+                    <p><b>Fitoterápicos</b> com evidências científicas</p>
+                </div>
+                <div class="tratamentoItem">
+                    <div><i class="fa-solid fa-user-doctor"></i></div>
+                    <p><b>Encaminhamentos</b> para outros profissionais de saúde de confiança</p>
+                </div>
+            
+            </div> <!--tratamentoList-->
+                
+            <br>
             
 
         </div>
@@ -837,7 +1045,7 @@
             <p>Avalio junto com você se as orientações iniciais estão sendo eficazes e entrego para você o plano terapêutico completo e individualizado.</p>
             <br>
             <h4>Consultas de Acompanhamento</h4>
-            Essas consultas são em geral mais espaçadas e servem para você progredir no tratamento. Casos mais complexos requerem mais tempo de tratamento.<br>
+            <p>Essas consultas são em geral mais espaçadas e servem para você progredir no tratamento. Casos mais complexos requerem mais tempo de tratamento.</p><br>
             <br>
             <br>
         
@@ -958,7 +1166,7 @@
                 <p>O desafio que você enfrenta não está nessa lista? Você	pode perguntar pra mim se eu consigo te ajudar.</p>
                 
                 <div class="actionDiv">
-                    <button class="actionButton whatsapp"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Fale comigo</a></button>
+                    <button class="actionButton whatsapp"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
                 </div>
 
                 <h3>Perguntas Frequentes</h3>
@@ -1000,9 +1208,9 @@
                     </button>
                     
                     <div class="content" id="contentPerguntas3">
-                        <p>Eu não proíbo ninguém de nada, prezo pelo protagonismo do paciente. Além disso, a Sociedade Brasileira de Diabetes recomenda que pessoas com diabetes possam consumir até 5% das necessidades energéticas diárias provenientes de açúcar.</p>
+                        <p>Não se preocupe, eu não proíbo ninguém de nada porque prezo pelo protagonismo do(a) paciente. Além disso, a Sociedade Brasileira de Diabetes recomenda que pessoas com diabetes possam consumir até 5% das necessidades energéticas diárias provenientes de açúcar. Te surpreendi né?</p>
 
-                        <p>Não acredite em quem só sabe o que é senso comum.</p>   
+                        <p>Uma alimentação equilibrada pode incluir açúcar, existem estratégias nutricionais que permitem isso. Não acredite em quem só sabe o que é senso comum.</p>   
                     </div>
                 </section>
                 <br>
@@ -1015,12 +1223,87 @@
                     </button>
                     
                     <div class="content" id="contentPerguntas4">
-                        <p>Depende da frequência com que eu atendo nas clínicas,, mas em geral você tem 30 dias para fazer essa consulta sem custo adicional.</p>
-
-                        <p>Não acredite em quem só sabe o que é senso comum.</p>   
+                        <p>Depende da frequência com que eu atendo nas clínicas, mas em geral você tem 30 dias para fazer essa consulta  de retorno sem custo adicional.</p>  
                     </div>
                     
                 </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas8"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas8" onclick="menuPerguntas8()">
+                        <div>
+                            O seu atendimento é adequado para todas as idades?
+                        </div>
+                        <i id="menuArrowPerguntas8" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas8">
+                        <p>Sim. Minha formação na UNEB é generalista e inclui crianças, adolescentes, adultos e idosos.
+                        </p> 
+                        <p>Mas eu não sou faz-tudo. Meu foco é ajudar pessoas com algum desafio de saúde.</p>
+                    </div>
+                </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas5"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas5" onclick="menuPerguntas5()">
+                        <div>
+                            Quem não se beneficiaria do seu atendimento?
+                        </div>
+                        <i id="menuArrowPerguntas5" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas5">
+                        <p>Trabalho com a Nutrição Clínica, isso significa que ajudo pessoas com desafios de saúde. Se você busca melhorar o desempenho em competições esportivas, por exemplo, sugiro que procure um nutricionista que atua na área esportiva.</p>
+                        <p>Mas, se você busca ajuda para algum desafio de saúde pode contar comigo.</p>  
+                    </div>
+                </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas6"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas6" onclick="menuPerguntas6()">
+                        <div>
+                            Posso fazer a consulta online?
+                        </div>
+                        <i id="menuArrowPerguntas6" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas6">
+                        <p>Sim. Mas, por não ser possível realizar exame físico e antropométrico nessa modalidade prefiro que a primeira consulta seja presencial.</p>
+                        <p>Se você mora muito longe posso averiguar se seu desafio de saúde dispensa a consulta presencial. É só entrar em contato comigo.</p>  
+                    </div>
+                </section>
+                <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas7"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas7" onclick="menuPerguntas7()">
+                        <div>
+                            Você atende fora das clínicas?
+                        </div>
+                        <i id="menuArrowPerguntas7" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas7">
+                        <p>Sim. Faço atendimento domiciliar na casa dos pacientes que não podem ou preferem não sair de casa.
+                        </p> 
+                        <p>Para entender melhor como funciona meu atendimento domiciliar é só falar comigo.</p> 
+                        <div class="actionDiv">
+                            <button class="actionButton whatsapp" style="background-color: #41c352; color: #fff;"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999" style="color: #fff;">Falar com Alan</a></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!--Posts recentes do blog-->
+                <br>
+                <div class="about">
+                    <h3>Posts recentes do blog</h3>
+                    <div class="blogList">
+                        <div class="blogItem">
+                            <figure><a href="https://alancruzassis.github.io/portifolio/blog/como-se-preparar-para-consulta-com-nutricionista"><img src="blog/list.jpg" alt="imagem de lista"></a></figure>
+                            <p><a href="https://alancruzassis.github.io/portifolio/blog/como-se-preparar-para-consulta-com-nutricionista">Como se preparar para a consulta com o nutricionista</a></p>
+                        </div>
+                        <div class="blogItem">
+                            <figure><a href="https://alancruzassis.github.io/portifolio/blog/como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono"><img src="blog/insonia.jpg" alt="imagem de pessoa com insônia"></a></figure>
+                            <p><a href="https://alancruzassis.github.io/portifolio/blog/como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono">Como o nutricionista auxilia na melhoria na qualidade do sono?</a></p>
+                        </div>
+                    </div>
+                </div>
 
     </div><!--.main-->
         <div class="projetos">
