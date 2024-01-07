@@ -719,6 +719,34 @@
         width: 100%;
         height: 100%;
     }
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 2em 1em;
+        border-top: 1px solid #f1f1f1;
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        font-size: 2em;
+        justify-content: space-around;
+        width: 40%;
+        max-width: 200px;
+        padding: 0;
+    }
+    footer div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .cruz{
+            display: none;
+        }
  
     @media only screen and (min-width: 768px) {
        
@@ -788,6 +816,7 @@
             width: 300px;
             height: auto;
         }
+
     }
     </style>
 
@@ -1144,6 +1173,7 @@
                     <li>Distúrbios do Sono</li>
                     <li>Distúrbios Respiratórios de repetição</li>
                     <li>Alergias Alimentares</li>
+                    <li>Cólicas Menstruais</li>
                     <li>Sintomas da Menopausa</li>
                 </ul>
                 <h4>Gravidez e Aleitamento</h4>
@@ -1296,63 +1326,23 @@
                             <p><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono">Como o nutricionista auxilia na melhoria da qualidade do sono?</a></p>
                         </div>
                     </div>
+                    <div class="actionDiv">
+                        <button class="actionButton whatsapp"><a href="https://wa.me/5599999999999">Ver mais posts</a></button>
+                    </div>
+                    <br>
+                    <br>
                 </div>
 
     </div><!--.main-->
-        <div class="projetos">
-            <div>
-                <h3>Projetos</h3>
-                <h4>Neonatologia</h4>
-                <ul>
-                    <li><a href="https://neodate.uneb.br" target="_blank">Neodate</a></li>
-                    <ul>
-                        <p class="i">Correção da Idade Gestacional de pré-termos</p>
-                    </ul>
-                </ul>
-                <ul>
-                    <li><a href="https://alancruzassis.github.io/vgp" target="_blank">VGP</a></li>
-                    <ul>
-                        <p class="i">Velocidade de Ganho de Peso</p>
-                    </ul>
-                </ul>    
-                    <h4>Medicamentos e Suplementos</h4>
-                    <ul>
-                        <li><a href="https://alancruzassis.github.io/transformsolucoes" target="_blank">Transform Soluções</a></li>
-                        <ul>
-                            <p class="i">Modificação da concentração de medicamentos</p>
-                        </ul>
-                    </ul>
-                    <ul>
-                    <li><a href="https://alancruzassis.github.io/comparesup" target="_blank">CompareSup</a></li>
-                        <ul>
-                            <p class="i">Auxilia na avaliação do custo-benefício de suplementos nutricionais</p>
-                        </ul>
-                    </ul>
-                <h4>Terapia Nutricional</h4>
-                <ul>
-                    <li><a href="https://alancruzassis.github.io/grandequeimado" target="_blank">Grande Queimado</a></li>
-                    <ul>
-                        <p class="i">Gasto Energético de pacientes com grandes queimaduras</p>
-                    </ul>
-                </ul>
-                <ul>
-                    <li><a href="https://alancruzassis.github.io/get" target="_blank">GET</a></li>
-                    <ul>
-                        <p class="i">Gasto Energético Basal e Total de Adultos e Idosos não críticos</p>
-                    </ul>
-                </ul>
-                <ul>
-                    <li><a href="https://alancruzassis.github.io/volumeinfundido" target="_blank">Volume Infundido / Prescrito</a></li>
-                    <ul>
-                        <p class="i">Calculadora do percentual de volume infundido</p>
-                    </ul>
-                </ul>
-            
-            </div>
-        </div>
+        
     </main>
     <footer>
-
+        <div><span>© 2023 Alan <span class="cruz">Cruz </span>Assis</span></div>
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+        </ul>
     </footer>
 
     <script src="https://kit.fontawesome.com/27d65a4a33.js" crossorigin="anonymous"></script>
