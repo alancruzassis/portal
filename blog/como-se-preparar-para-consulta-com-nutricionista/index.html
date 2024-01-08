@@ -13,7 +13,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        
+    <script>
+      function dropMenu(){
+            var dropdownMenuList = window.document.getElementById("dropdownMenuList");
+             var dropdownMenuButton = window.document.getElementById("dropdownMenuButton");
+
+            if (dropdownMenuList.style.display != "flex"){
+                dropdownMenuList.style.display="flex";
+                dropdownMenuButton.style.backgroundColor="darkblue";
+                dropdownMenuButton.style.color="#fff";
+            }else{
+                dropdownMenuList.style.display="none";
+                dropdownMenuButton.style.backgroundColor="transparent";
+                dropdownMenuButton.style.color="#1E3050";
+            }
+         }
+    </script>   
     <style>
 
       *{
@@ -53,7 +68,10 @@
       a:hover, a:active{
         color: #0a66c2;
       }
-
+      .navDiv{
+        display: block;
+        height: 10px;
+      }
       main{
         display: flex;
         flex-direction: column;
@@ -92,8 +110,8 @@
       .dropdownMenuButton{
         color: #1E3050;
         display: inline-block;
-        top: 1rem;
-        right: 1rem;
+        top: 0;
+        right: 0;
         position: absolute;
         cursor: pointer;
         background-color: transparent;
@@ -103,8 +121,8 @@
         border-radius: 0.3em;
       }
       .dropdownMenuList{
-        top: 50px;
-        width: 90%;
+        top: 0px;
+        width: 99%;
         display: none;
         flex-direction: column;
         align-items: flex-end;
@@ -112,16 +130,21 @@
         position: absolute;
         text-align: center;
         z-index: 999;
+        background-color: #fff;
+        box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
       }
       .dropMenu{
         box-shadow: 0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.141), 0 1px 3px 0 rgba(0,0,0,0.122);
         align-items: center;
         border-radius: 0.4em;
         background-color: #fff;
-        max-width: max-content;
+        max-width: 9000px;
       }
       .dropMenu ul{
         padding: 0;
+      }
+      .dropdownMenuList ul{
+        width: 99%;
       }
       .dropdownMenuList a{
         text-decoration: none;
@@ -393,19 +416,30 @@
 
 </head>
 <body>
-        <header class="header">
-           
-        </header>
-    
+  <div class="navDiv">
+    <button class="dropdownMenuButton drop"  id="dropdownMenuButton" onclick="dropMenu()"><i class="fa-solid fa-bars drop"></i></button>  
+    <nav class="dropMenu" onclick="dropMenu()">
+        <div class="dropdownMenuList" id="dropdownMenuList">
+          <button>x</button>
+          <ul  >
+            <li><a href="https://alancruzassis.github.io/portal">Início</a></li>
+            <li><a href="#">O que eu faço</a></li>
+            <li><a href="#">Materiais gratuitos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <div class="main">
     <main>
+      <header>
         <div class="nameANDinformation">
                 <h1>Como se preparar para a consulta com o nutricionista</h1>
-            </div>
+        </div>
             <figure>
                 <img src="list.jpg" id="imgList" alt="desenho de uma lista">
                 <p style="font-size: 0.5em;">Imagem: Freepik</p>
             </figure>
+      </header>
         <div id="sobreMim" class="about">
             <p>Preparar-se adequadamente para a sua primeira consulta com o nutricionista é fundamental para otimizar o tempo e garantir uma experiência mais produtiva. Aqui estão algumas dicas úteis que elaborei com base no meu modelo de atendimento:
             <br>
