@@ -122,7 +122,7 @@
       }
       .dropdownMenuList{
         top: 0px;
-        width: 99%;
+        width: 100%;
         display: none;
         flex-direction: column;
         align-items: flex-end;
@@ -145,12 +145,18 @@
       }
       .dropdownMenuList ul{
         width: 99%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .dropdownMenuList a{
         text-decoration: none;
       }
       .dropdownMenuList li{
         list-style: none;
+        border-bottom: 0.5px solid #f1f1f1;
+        width: 85%;
       }
       .dropdownMenuList a{
         display: block;
@@ -363,6 +369,51 @@
         height: 100%;
     }
 
+    .buttonX{
+      padding: 0.5em;
+      background-color: #fff;
+      color: #1E3050;
+      border: none;
+      margin: 1px;
+      font-size: 1.2em;
+      cursor: pointer;
+      border-radius: 0.1em;
+    }
+    .buttonX:hover{
+      background-color: #0a66c2;
+      color: #fff;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 2em 1em;
+        border-top: 1px solid #f1f1f1;
+        width: 80%;
+        justify-content: space-evenly;
+        margin-top: 3em;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        font-size: 2em;
+        justify-content: space-around;
+        width: 40%;
+        max-width: 200px;
+        padding: 0;
+    }
+    footer div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer .cruz{
+        display: none;
+    }
+
     @media only screen and (min-width: 768px) {
        
 
@@ -406,8 +457,14 @@
             margin: 0.3rem 0.3rem;
         }
         .blogItem img{
-            width: 300px;
+            width: auto;
             height: auto;
+            max-height: 100%;
+            max-width: 100%;
+        }
+        .blogItem figure{
+          height: 80%;
+          width: 100%;
         }
 
 
@@ -420,9 +477,9 @@
     <button class="dropdownMenuButton drop"  id="dropdownMenuButton" onclick="dropMenu()"><i class="fa-solid fa-bars drop"></i></button>  
     <nav class="dropMenu" onclick="dropMenu()">
         <div class="dropdownMenuList" id="dropdownMenuList">
-          <button>x</button>
+          <button class="buttonX"><i class="fa-solid fa-x"></i></button>
           <ul  >
-            <li><a href="https://alancruzassis.github.io/portal">Início</a></li>
+            <li ><a href="https://alancruzassis.github.io/portal">Início</a></li>
             <li><a href="#">O que eu faço</a></li>
             <li><a href="#">Materiais gratuitos</a></li>
           </ul>
@@ -445,7 +502,7 @@
             <br>
             </p>
             <ol>
-                <h3><li>Histórico clínico</li></h3>
+                <h3><li>Histórico Clínico</li></h3>
                 <ul>
                     <li>Traga com você seu histórico de saúde completo, incluindo quaisquer condições médicas, cirurgias anteriores, alergias, medicamentos em uso e resultados de exames recentes.</li>
                 </ul>
@@ -498,12 +555,29 @@
                   <figure><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono"><img src="../como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono/insonia.jpg" alt="imagem de pessoa com insônia"></a></figure>
                   <p><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-auxilia-na-melhoria-da-qualidade-do-sono">Como o nutricionista auxilia na melhoria da qualidade do sono?</a></p>
               </div>
+              <div class="blogItem">
+                <figure><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-contribui-para-o-aumento-da-massa-muscular"><img src="../como-o-nutricionista-contribui-para-o-aumento-da-massa-muscular/6962031.jpg" alt="imagem de pessoas se alongando"></a></figure>
+                <p><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-contribui-para-o-aumento-da-massa-muscular">Como o nutricionista contribui para aumentar a massa muscular?</a></p>
+            </div>
+            <div class="blogItem">
+              <figure><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-auxilia-no-tratamento-da-ansiedade"><img src="../como-o-nutricionista-auxilia-no-tratamento-da-ansiedade/ansiedade.jpg" alt="imagem de pessoa ansiosa"></a></figure>
+              <p><a href="https://alancruzassis.github.io/portal/blog/como-o-nutricionista-auxilia-no-tratamento-da-ansiedade">Como o nutricionista auxilia no tratamento da ansiedade?</a></p>
+            </div>
           </div>
+          <br>
+          <div class="actionDiv">
+            <button class="actionButton whatsapp"><a href="https://alancruzassis.github.io/portal/blog">Ver mais posts</a></button>
+        </div>
 
     </main>
     <footer>
-
-    </footer>
+      <div><span>© 2023 Alan <span class="cruz">Cruz </span>Assis</span></div>
+      <ul>
+          <li><a href="https://www.linkedin.com/in/alancruzassis/"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+          <li><a href="#"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+      </ul>
+  </footer>
 
     <script src="https://kit.fontawesome.com/27d65a4a33.js" crossorigin="anonymous"></script>
     
