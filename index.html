@@ -313,6 +313,28 @@
                 }
 
             }
+            function menuPerguntas8 (){
+                var contentPerguntas8 = window.document.getElementById("contentPerguntas8");
+                var acordeonPerguntas8 = window.document.getElementById("acordeonPerguntas8");
+                var triggerPerguntas8 = window.document.getElementById("triggerPerguntas8");
+                var menuArrowPerguntas8 = window.document.getElementById("menuArrowPerguntas8");
+
+                if(contentPerguntas8.style.display!="block"){
+                    contentPerguntas8.style.display="block";
+                    menuArrowPerguntas8.className="fa-solid fa-chevron-up";
+                    
+
+                   
+                    
+                }else{
+                    contentPerguntas8.style.display="none";
+                    menuArrowPerguntas8.className="fa-solid fa-chevron-down";
+                                      
+                   
+                    
+                }
+
+            }
             function menuPerguntas6 (){
                 var contentPerguntas6 = window.document.getElementById("contentPerguntas6");
                 var acordeonPerguntas6 = window.document.getElementById("acordeonPerguntas6");
@@ -357,22 +379,22 @@
                 }
 
             }
-            function menuPerguntas8 (){
-                var contentPerguntas8 = window.document.getElementById("contentPerguntas8");
-                var acordeonPerguntas8 = window.document.getElementById("acordeonPerguntas8");
-                var triggerPerguntas8 = window.document.getElementById("triggerPerguntas8");
-                var menuArrowPerguntas8 = window.document.getElementById("menuArrowPerguntas8");
+            function menuPerguntas9 (){
+                var contentPerguntas9 = window.document.getElementById("contentPerguntas9");
+                var acordeonPerguntas9 = window.document.getElementById("acordeonPerguntas9");
+                var triggerPerguntas9 = window.document.getElementById("triggerPerguntas9");
+                var menuArrowPerguntas9 = window.document.getElementById("menuArrowPerguntas9");
 
-                if(contentPerguntas8.style.display!="block"){
-                    contentPerguntas8.style.display="block";
-                    menuArrowPerguntas8.className="fa-solid fa-chevron-up";
+                if(contentPerguntas9.style.display!="block"){
+                    contentPerguntas9.style.display="block";
+                    menuArrowPerguntas9.className="fa-solid fa-chevron-up";
                     
 
                    
                     
                 }else{
-                    contentPerguntas8.style.display="none";
-                    menuArrowPerguntas8.className="fa-solid fa-chevron-down";
+                    contentPerguntas9.style.display="none";
+                    menuArrowPerguntas9.className="fa-solid fa-chevron-down";
                                       
                    
                     
@@ -713,6 +735,10 @@
         height: 100%;
     }
 
+    .locais{
+        margin-bottom: 2em;
+    }
+
     .locais section, .locais img{
         width: 98%;
     }
@@ -817,6 +843,10 @@
         .blogItem img{
             width: 300px;
             height: auto;
+        }
+
+        .locais section, .locais img{
+            max-width: 400px;
         }
 
     }
@@ -1074,7 +1104,7 @@
             <p>Essas consultas servem para você dar continuidade no tratamento. Casos mais complexos requerem mais tempo de tratamento.</p><br>
             <br>
             <br>
-        
+
         </div>
         <div id="publicoAlvo" class="about">
             <h3>Para quem é?</h3>
@@ -1216,6 +1246,21 @@
                     
                 </section>
                 <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas4"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas4" onclick="menuPerguntas4()">
+                        <div>
+                            A consulta dá direito a retorno gratuito ou terei que pagar todas as vezes que for atendido(a)?
+                        </div>
+                        <i id="menuArrowPerguntas4" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas4">
+                        <p>Cada consulta dá direito a um (01) retorno dentro do prazo estabelecido: 30 dias. Ou seja, se você paga por uma consulta, tem direito a 01 retorno gratuito em até 30 dias. Passado esse prazo, já contará como uma nova consulta. 
+                        </p>
+                    </div>
+                    
+                </section>
+                <br>
                 <section class="acordeon perguntas" id="acordeonPerguntas2"> 
                     <button class="triggerPerguntas" id="triggerPerguntas2" onclick="menuPerguntas2()">
                         <div>
@@ -1225,8 +1270,13 @@
                     </button>
                     
                     <div class="content" id="contentPerguntas2">
-                        <p>O valor do atendimento varia conforme as clínicas. Confira os valores <a href="#locaisAtendimento">entrando em contato com as clínicas</a> 
+                        <p>O valor do atendimento varia conforme as clínicas. Confira os valores <a href="#locaisAtendimento">entrando em contato com as clínicas</a>. 
                         </p>
+                        <p>Para atendimento online ou domiciliar entre em contato comigo pelo whatsapp. </p>
+                        <p>Divulgar o valor dos serviços como forma de publicidade é infração ética de acordo com o CFN, por isso não escrevi  esses valores aqui.</p>
+                        <div class="actionDiv">
+                            <button class="actionButton whatsapp"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
+                        </div>
                     </div>
                     
                 </section>
@@ -1244,20 +1294,6 @@
 
                         <p>Uma alimentação equilibrada pode incluir açúcar, existem estratégias nutricionais que permitem isso. Não acredite em quem só sabe o que é senso comum.</p>   
                     </div>
-                </section>
-                <br>
-                <section class="acordeon perguntas" id="acordeonPerguntas4"> 
-                    <button class="triggerPerguntas" id="triggerPerguntas4" onclick="menuPerguntas4()">
-                        <div>
-                            Quanto tempo entre a primeira consulta e a consulta de retorno?
-                        </div>
-                        <i id="menuArrowPerguntas4" class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    
-                    <div class="content" id="contentPerguntas4">
-                        <p>Depende da frequência com que eu atendo nas clínicas, mas em geral você tem 30 dias para fazer essa consulta  de retorno sem custo adicional.</p>  
-                    </div>
-                    
                 </section>
                 <br>
                 <section class="acordeon perguntas" id="acordeonPerguntas8"> 
@@ -1289,6 +1325,19 @@
                     </div>
                 </section>
                 <br>
+                <section class="acordeon perguntas" id="acordeonPerguntas9"> 
+                    <button class="triggerPerguntas" id="triggerPerguntas9" onclick="menuPerguntas9()">
+                        <div>
+                            Você trabalha em parceria com outros profissionais?
+                        </div>
+                        <i id="menuArrowPerguntas9" class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    
+                    <div class="content" id="contentPerguntas9">
+                        <p>Sim, sempre que necessário e o(a) paciente apresenta algo que não é da minha competência técnica indico diversos profissionais da minha confiança. A lista com esses profissionais está disponível aqui no site, na página <a href="https://alancruzassis.github.io/portal/profissionais-que-indico">Profissionais que eu indico</a></p>
+                    </div>
+                </section>
+                <br>
                 <section class="acordeon perguntas" id="acordeonPerguntas6"> 
                     <button class="triggerPerguntas" id="triggerPerguntas6" onclick="menuPerguntas6()">
                         <div>
@@ -1312,9 +1361,9 @@
                     </button>
                     
                     <div class="content" id="contentPerguntas7">
-                        <p>Sim. Faço atendimento domiciliar na casa dos pacientes que não podem ou preferem não sair de casa.
+                        <p>Sim. Faço atendimento online e domiciliar na casa dos pacientes que não podem ou preferem não sair de casa.
                         </p> 
-                        <p>Para entender melhor como funciona meu atendimento domiciliar é só falar comigo.</p> 
+                        <p>Para entender melhor como funcionam meus atendimentos domiciliar e online é só falar comigo.</p> 
                         <div class="actionDiv">
                             <button class="actionButton whatsapp" style="background-color: #41c352; color: #fff;"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999" style="color: #fff;">Falar com Alan</a></button>
                         </div>
@@ -1348,11 +1397,30 @@
                 <section class="locais">
                     <a href="https://www.google.com/maps/place/Centro+M%C3%A9dico+O+Bom+Doutor/@-12.5075033,-38.9998722,17.77z/data=!4m6!3m5!1s0x715b7ce3a9d0f57:0x6b3be7bc45f88de3!8m2!3d-12.5076591!4d-38.9988706!16s%2Fg%2F11sfrqww2_?entry=ttu"><img src="local-bom-doutor.jpg" alt="Centro Médico Bom Doutor no mapa"></a>
                     <p><a href="https://www.google.com/maps/place/Centro+M%C3%A9dico+O+Bom+Doutor/@-12.5075033,-38.9998722,17.77z/data=!4m6!3m5!1s0x715b7ce3a9d0f57:0x6b3be7bc45f88de3!8m2!3d-12.5076591!4d-38.9988706!16s%2Fg%2F11sfrqww2_?entry=ttu"><b>Centro Médico O Bom Doutor</b><br>Rua 31 de Março, Conceição da Feira - BA, 44320-000</a></p>
+                    <p><i class="fa-solid fa-phone"></i><b> Telefone: </b><a style="text-decoration: underline;" href="tel:+5571999999999">(71) 9 9999-9999</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><b> Whatsapp: </b><a style="text-decoration: underline;" href="https://wa.me/5571999999999">(71) 9 9999-9999</a></p>
                 </section>
                 <section class="locais">
                     <a href="https://www.google.com/maps/search/63+R.+das+Amendoeiras,+Bahia/@-12.723135,-38.9725296,10z/data=!3m1!4b1?entry=ttu"><img src="local-vittal.jpg" alt="Centro Médico Bom Doutor no mapa"></a>
-                    <p><a href="https://www.google.com/maps/search/63+R.+das+Amendoeiras,+Bahia/@-12.723135,-38.9725296,10z/data=!3m1!4b1?entry=ttu"><b>Clínica Vittal</b><br>Rua das Amoreiras 63, Conceição da Feira - BA, 44320-000</a></p>
+                    <p><a href="https://www.google.com/maps/search/63+R.+das+Amendoeiras,+Bahia/@-12.723135,-38.9725296,10z/data=!3m1!4b1?entry=ttu"><b>Pró-Exame policlínica</b><br>Rua das Amoreiras 63, Conceição da Feira - BA, 44320-000</a></p>
+                    <p><i class="fa-solid fa-phone"></i><b> Telefone: </b><a style="text-decoration: underline;" href="tel:+5571999999999">(71) 9 9999-9999</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><b> Whatsapp: </b><a style="text-decoration: underline;" href="https://wa.me/5571999999999">(71) 9 9999-9999</a></p>
                 </section>
+                <!--<section class="locais">
+                    <a href="https://www.google.com/maps/search/63+R.+das+Amendoeiras,+Bahia/@-12.723135,-38.9725296,10z/data=!3m1!4b1?entry=ttu"><img src="local-vittal.jpg" alt="Centro Médico Bom Doutor no mapa"></a>
+                    <p><a href="https://www.google.com/maps/search/63+R.+das+Amendoeiras,+Bahia/@-12.723135,-38.9725296,10z/data=!3m1!4b1?entry=ttu"><b>Clínica São Francisco</b><br>Rua Treze de Maio, São Gonçalo dos Campos - BA, 44330-000</a></p>
+                    <p><i class="fa-solid fa-phone"></i><b> Telefone: </b><a style="text-decoration: underline;" href="tel:+557532463647">(75) 3246-3647</a></p>
+                    <p><i class="fa-brands fa-whatsapp"></i><b> Whatsapp: </b><a style="text-decoration: underline;" href="https://wa.me/5571999999999">(71) 9 9999-9999</a></p>
+                </section>-->
+
+                <h4>Atendimento online e domiciliar</h4>
+                <section class="locais">
+                    <p>Entre em contato comigo para conferir agenda disponível e condições.</p>
+                    <div class="actionDiv">
+                        <button class="actionButton whatsapp"><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5599999999999">Falar com Alan</a></button>
+                    </div>
+                </section>
+
 
     </div><!--.main-->
         
